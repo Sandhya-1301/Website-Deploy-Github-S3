@@ -1,0 +1,67 @@
+/* Reset & Base Styles */
+body {
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #acdff5; /* Soft neutral background */
+  color: #46ef78;            /* Dark slate text for readability */
+}
+
+/* Title Styling */
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 30px auto 10px;
+  color: #34495e;
+}
+
+/* Divider Under Title */
+hr {
+  width: 50%;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+}
+
+/* Section Container */
+section {
+  background-color: #333232;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* Project Architecture Image */
+img {
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Button Styling */
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Optional Footer or Contact Section */
+footer {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 2rem;
+  color: #ed8a27;
+}

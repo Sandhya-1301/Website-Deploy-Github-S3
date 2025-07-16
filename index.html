@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cloud Portfolio</title>
+  <meta name="description" content="Showcase site hosted on AWS S3 with GitHub CI/CD">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Cloud Portfolio</h1>
+    
+  </header>
+
+  <section id="about">
+    <h2>Project Architecture</h2>
+    <p>This visual shows how GitHub Actions automate deployment to AWS S3.</p>
+    <img src="images/Automatic-Static-Web.png" alt="Deployment Flow" style="max-width: 600px; width: 100%; height: auto; display: block; margin: 20px auto;">
+  </section>
+
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <button onclick="showMessage()">Test Website</button>
+    <p>Current time: <span id="current-time"></span></p>
+    <p>Last updated: <span id="update-date"></span></p>
+  </section>
+
+  <footer>
+    <p>Site hosted on  Internal Device</p>
+    <!--<p>Site hosted on AWS S3 — using GitHub Actions</p>-->    
+    <!--<p>Site hosted on GitHub for CI/CD</p>-->
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
