@@ -1,5 +1,5 @@
 function showMessage() {
-  alert("Hello, Thulasiram! Your site is running smoothly.");
+  alert("Hello, Sandhya! Your site is running smoothly.");
 }
 
 // 🕒 Display current time
