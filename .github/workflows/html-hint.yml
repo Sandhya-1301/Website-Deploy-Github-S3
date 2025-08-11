@@ -24,28 +24,30 @@ jobs:
       - name: Run htmlhint
         run: htmlhint index.html
 
-  deploy-github-pages:
-    name: Deploy to GitHub Pages
-    needs: lint-html
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+deploy-github-pages:
+  name: Deploy to GitHub Pages
+  needs: lint-html
+  if: success()  # ✅ only run if lint-html succeeded
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
+    - name: Setup Pages
+      uses: actions/configure-pages@v3
 
-      - name: Upload HTML files
-        uses: actions/upload-artifact@v3
-        with:
-          path: ./  # adjust if needed
+    - name: Upload HTML files
+      uses: actions/upload-artifact@v3
+      with:
+        path: ./  # adjust if needed
 
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v2
 
   deploy-s3:
     name: Deploy to S3
     needs: lint-html
+    if: success()  # This blocks deploy if linting fails
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
