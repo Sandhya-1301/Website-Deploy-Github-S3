@@ -3,7 +3,7 @@ name: HTML Lint
 on:
   push:
     paths:
-      - '**'
+      - '**/*.html'
 
 jobs:
   lint-html:
