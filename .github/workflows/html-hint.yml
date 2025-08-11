@@ -3,7 +3,7 @@ name: Lint and Deploy to GitHub Pages & S3
 on:
   push:
     paths:
-      - '**/*.html'
+      - '**'
     branches:
       - main
 
